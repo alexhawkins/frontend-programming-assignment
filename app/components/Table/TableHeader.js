@@ -1,32 +1,32 @@
 var React = require("react");
+var Created = require("./Columns/Created");
+var Title = require("./Columns/Title");
+var Image = require("./Columns/Image");
+var Views = require("./Columns/Views");
+var Id = require("./Columns/Id");
 
-var TableFilterBar = React.createClass({
+var TableHeader = React.createClass({
 
     propTypes: {
-        onFilterInput: React.PropTypes.func.isRequired,
-        filterBarText: React.PropTypes.string.isRequired
-    },
-
-    handleChange: function() {
-        this.props.onFilterInput(
-            this.refs.filterBarText.getDOMNode().value.trim()
-        );
+        onSortBy: React.PropTypes.func.isRequired,
+        orderByDesc: React.PropTypes.object.isRequired
     },
 
     render: function() {
+        var onSortBy = this.props.onSortBy;
+        var orderByDesc = this.props.orderByDesc;
         return (
-            <form>
-                <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Filter videos by title..."
-                    ref="filterBarText"
-                    value={this.props.filterBarText}
-                    onChange={this.handleChange}
-                />
-            </form>
+            <thead>
+                <tr>
+                    <Image />
+                    <Title onSortBy={onSortBy} orderByDesc={orderByDesc.title} />
+                    <Views onSortBy={onSortBy} orderByDesc={orderByDesc.views} />
+                    <Created onSortBy={onSortBy} orderByDesc={orderByDesc.publishedAt} />
+                    <Id onSortBy={onSortBy} orderByDesc={orderByDesc.channelId} />
+                </tr>
+            </thead>
         );
     }
 });
 
-module.exports = TableFilterBar;
+module.exports = TableHeader;
