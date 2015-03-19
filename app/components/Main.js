@@ -22,6 +22,7 @@ var Main = React.createClass({
                     </div>
                     <RouteHandler/>
                 </div>
+                <span className="invisible-text">&copy; Alex Hawkins &mdash; 2015</span>
             </div>
         );
     }

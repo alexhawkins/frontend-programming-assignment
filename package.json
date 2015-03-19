@@ -26,7 +26,6 @@
   "homepage": "https://github.com/alexhawkins/frontend-programming-assignment",
   "dependencies": {
     "babel": "^4.7.12",
-    "bootstrap": "^3.3.2",
     "classnames": "^1.1.4",
     "events": "^1.0.2",
     "flux": "^2.0.1",

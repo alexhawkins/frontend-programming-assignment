@@ -1,10 +1,69 @@
-## Task
-Using React (JSX is optional), display the YouTube channels found in `js/main.js` in an HTML table. When a user clicks a table heading, the data should be sorted based on which column heading was clicked (e.g. clicking the "Views" heading should sort by views descending). Finally, add a search box and allow users to filter the result set as they type.
+##Tuber
+#####*Search/Filter/Sort YouTube Videos Instantly*
 
-## Notes
-Feel free to install any other JS/CSS libraries you'd like \*, but React is a requirement
+###Live Demo
+[Visit Tuber online!](https://tuber.firebaseapp.com/)
 
-## Bonus
-Move the YouTube data into an external file, use AJAX & Promises to provide state for your React component.
+###Technologies Used
+  * React
+  * React Router
+  * Flux
+  * Bootstrap
+  * YouTube API v3
+  * Firebase
 
-\* Other than the JSX transformer, no transpilers are allowed (Coffee/TypeScript/etc)
+###SETUP:
+  * Fork this repo and clone your fork
+  * run ```npm install```
+  * run ```webpack -w``` to build and watch
+  * run ```webpack-dev-server``` to run app locally.
+  * go to ```http://localhost:8080/public```
+
+For reference the final folder structure should look something like this:
+
+###Code Architecture
+
+```
+├── app/
+│   ├── App.js
+│   ├── actions
+|   ├── ├── SearchActions.js
+|   ├── components/
+|   ├── ├── SearchBar/
+|   ├── ├── ├── SearchBar.js
+|   ├── ├── ├── SearchResultsContainer.js
+|   ├── ├── ├── Register.js
+|   ├── ├── Table/
+|   ├── ├── ├── Columns/
+|   ├── ├── ├── ├── Created.js
+|   ├── ├── ├── ├── Id.js
+|   ├── ├── ├── ├── Image.js
+|   ├── ├── ├── ├── Title.js
+|   ├── ├── ├── ├── Views.js
+|   ├── ├── ├── Table.js
+|   ├── ├── ├── TableContainer.js
+|   ├── ├── ├── TableFilterBar.js
+|   ├── ├── ├── TablerHeader.js
+|   ├── ├── ├── TableRow.js
+|   ├── ├── Main.js
+|   ├── config/
+|   ├── ├── routes.js
+|   ├── constants/
+|   ├── ├── AppConstants.js
+|   ├── dispatcher/
+|   ├── ├── AppDispatcher.js
+|   ├── stores/
+|   ├── ├── SearchStore.js
+|   ├── utils/
+|   ├── ├── Helpers/
+|   ├── ├── ├── helpers.js
+|   ├── ├── SearchYouTubeUtils.js
+├── public/
+│   ├── index.html
+|   ├── css/
+│   ├── ├── mains.css
+├── webpack.config.js
+├── package.json
+├── README.md
+├── .gitignore
+```

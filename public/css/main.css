@@ -82,6 +82,9 @@ a, a:hover {
 
 .panel-footer {
     border-radius: 0 0 0.429em 0.429em;
+}
+
+.invisible-text {
     color: transparent;
 }
 
@@ -162,4 +165,16 @@ input.form-control, input.form-control:focus {
 
 .italic-title {
     font-style: italic;
+}
+
+.back-to-top{
+    color: #818181;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#fff, #f5f5f5);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f5f5f5));
+    background: -moz-linear-gradient(#fff, #f5f5f5);
+    background: -o-linear-gradient(#fff, #f5f5f5);
+    background: linear-gradient(#fff, #f5f5f5);
+    background-color: #f5f5f5;
+    border-radius: 6px;
 }
